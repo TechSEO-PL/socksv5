@@ -112,7 +112,8 @@ var tests = [
                                       0xC0, 0xA8, 0x64, 0x01,
                                       0x00, 0x50]));
       assert.deepEqual(request,
-                       { cmd: 'connect',
+                       { auth: {},
+                         cmd: 'connect',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: '192.168.100.1',
@@ -142,7 +143,8 @@ var tests = [
                                       0xC0, 0xA8, 0x64, 0x01,
                                       0x00, 0x50]));
       assert.deepEqual(request,
-                       { cmd: 'bind',
+                       { auth: {},
+                         cmd: 'bind',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: '192.168.100.1',
@@ -172,7 +174,8 @@ var tests = [
                                       0xC0, 0xA8, 0x64, 0x01,
                                       0x00, 0x50]));
       assert.deepEqual(request,
-                       { cmd: 'udp',
+                       { auth: {},
+                         cmd: 'udp',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: '192.168.100.1',
@@ -205,7 +208,8 @@ var tests = [
                                        0x00, 0x02, 0xB0, 0x01,
                                       0x08, 0x40]));
       assert.deepEqual(request,
-                       { cmd: 'connect',
+                       { auth: {},
+                         cmd: 'connect',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: 'fffe:e0d0:000c:00a0:0000:0300:0002:b001',
@@ -236,7 +240,8 @@ var tests = [
                                        0x2E, 0x6F, 0x72, 0x67,
                                       0x05, 0x39]));
       assert.deepEqual(request,
-                       { cmd: 'connect',
+                       { auth: {},
+                         cmd: 'connect',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: 'nodejs.org',
@@ -268,7 +273,8 @@ var tests = [
       stream.emit('data', new Buffer([0x05]));
       stream.emit('data', new Buffer([0x39]));
       assert.deepEqual(request,
-                       { cmd: 'connect',
+                       { auth: {},
+                         cmd: 'connect',
                          srcAddr: undefined,
                          srcPort: undefined,
                          dstAddr: 'nodejs.org',
